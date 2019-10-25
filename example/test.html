@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fixed Workspace</title>
+</head>
+<body>
+<div>
+    <div id="blocklyDiv" style="float:left; margin-right: 10px;
+                    height: 480px; width: 777px;"></div>
+    <div style="float:left; height: 200px; width: 200px;">
+        <input type="button" value="send request"/>
+    </div>
+</div>
+
+<script src="../lib/TQ-puzzle/blockly_compressed.js"></script>
+<script src="../lib/TQ-puzzle/blocks_compressed.js"></script>
+<script src="../lib/TQ-puzzle/msg/js/en.js"></script>
+<xml id="toolbox" style="display: none">
+    <block type="controls_if"></block>
+    <block type="controls_repeat_ext"></block>
+    <block type="logic_compare"></block>
+    <block type="math_number"></block>
+    <block type="math_arithmetic"></block>
+    <block type="text"></block>
+    <block type="text_print"></block>
+</xml>
+</body>
+</html>
+<script>
+    var workspace = Blockly.inject('blocklyDiv',
+        {toolbox: document.getElementById('toolbox')});
+</script>

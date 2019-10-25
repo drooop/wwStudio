@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>drop table</title>
+    <!--    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>-->
+    <link rel='stylesheet' href="../lib/css/bootstrap.css">
+
+    <link rel="stylesheet" href="../lib/css/mdb.min.css">
+
+    <link rel="stylesheet" href="../lib/css/style.css">
+    <link rel="stylesheet" href="../lib/css/MDicon.min.css">
+    <link rel='stylesheet' href="../lib/css/vanilla-dataTables.min.css">
+    <link rel="stylesheet" href="../lib/css/vanilla.css">
+    <link rel="stylesheet" href="../lib/css/drop.css">
+    <link rel="stylesheet" href="../lib/css/ipInput.css">
+
+    <style>
+        .map-container {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+
+        .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-color: #fff;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-weight: normal;
+            font-size: 140%;
+        }
+
+        table {
+            height: 100%;
+            width: 100%;
+        }
+
+        #blocklyArea {
+            height: 99%;
+            background: #fc9;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body class="grey lighten-3">
+
+<!--Main Navigation-->
+<header>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg drop scrolling-navbar">
+        <div class="container-fluid">
+
+            <!-- Brand -->
+            <a class="navbar-brand waves-effect" href="#" target="_blank">
+            </a>
+
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Left -->
+                <ul class="navbar-nav mr-auto">
+                </ul>
+
+                <!-- Right -->
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Sidebar -->
+    <div class="sidebar-fixed position-fixed">
+
+        <a class="logo-wrapper waves-effect">
+            <img src="../lib/img/TQ/LOGO@2x.png">
+        </a>
+
+        <div id="sidebar_1" class="list-group list-group-flush">
+            <a href="#" class="list-group-item active waves-effect" style="text-align: center">
+                <i class="fas fa-user mr-3"></i> 用户管理 </a>
+            <a href="http://localhost:5000/api/vars" class="list-group-item waves-effect" style="text-align: center">
+                <i class="fas fa-table mr-3"></i>
+                数据采集配置表 </a>
+            <a href="http://localhost:5000/api/download_page" class="list-group-item waves-effect"
+               style="text-align: center">
+                <i class="fas fa-money-bill-alt mr-3"></i>
+                数据下载 </a>
+        </div>
+
+    </div>
+    <!-- Sidebar -->
+
+</header>
+<!--Main Navigation-->
+
+<main class="pt-5 mx-lg-5">
+    <!-- partial:index.partial.html -->
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <h1><a href="https://developers.google.com/blockly/">Blockly</a> &gt;
+                                    <a href="https://blockly-demo.appspot.com/static/demos/index.html">Demos</a> &gt;
+                                    Resizable Blockly (Part 1)</h1>
+
+                                <p>The first step in creating a resizable Blockly workspace is to use
+                                    CSS or tables to create an area for it.
+                                    Next, <a
+                                            href="https://blockly-demo.appspot.com/static/demos/resizable/overlay.html">inject
+                                        Blockly</a> over that area.</p>
+
+                                <p>→ More info on <a
+                                        href="https://developers.google.com/blockly/guides/configure/web/resizable">injecting
+                                    resizable Blockly</a>…</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="blocklyArea">
+                                Blockly will be positioned here.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div id="blocklyDiv"
+                         style="position: absolute;
+                         left: 2px;top: 141px; width: 1703px; height: 660px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="../lib/TQ-puzzle/blockly_compressed.js"></script>
+<script src="../lib/TQ-puzzle/blocks_compressed.js"></script>
+<script src="../lib/TQ-puzzle/msg/js/en.js"></script>
+<!-- partial -->
+<script src="../lib/js/jquery-3.4.1.min.js"></script>
+<script src="../lib/js/popper.min.js"></script>
+<script src="../lib/js/bootstrap.min.js"></script>
+<script src="../lib/js/mdb.min.js"></script>
+<script src="../lib/js/vanilla-dataTables-original.js"></script>
+<script src="../lib/js/vanilla.js"></script>
+<script src="../lib/js/vanilla_bak.js"></script>
+<script src="../lib/js/moment.js"></script>
+<script src="../lib/js/ipInput.js"></script>
+</body>
+</html>
+<xml id="toolbox" style="display: none">
+    <block type="controls_if"></block>
+    <block type="controls_repeat_ext"></block>
+    <block type="logic_compare"></block>
+    <block type="math_number"></block>
+    <block type="math_arithmetic"></block>
+    <block type="text"></block>
+    <block type="text_print"></block>
+</xml>
+<script>
+    var blocklyArea = document.getElementById('blocklyArea');
+    var blocklyDiv = document.getElementById('blocklyDiv');
+    var workspace = Blockly.inject(blocklyDiv,
+        {toolbox: document.getElementById('toolbox')});
+    var onresize = function (e) {
+        // Compute the absolute coordinates and dimensions of blocklyArea.
+        var element = blocklyArea;
+        var x = 0;
+        var y = 0;
+        do {
+            x += element.offsetLeft;
+            y += element.offsetTop;
+            element = element.offsetParent;
+        } while (element);
+        // Position blocklyDiv over blocklyArea.
+        blocklyDiv.style.left = x + 'px';
+        blocklyDiv.style.top = y + 'px';
+        blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
+        blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
+        Blockly.svgResize(workspace);
+    };
+    window.addEventListener('resize', onresize, false);
+    onresize();
+    Blockly.svgResize(workspace);
+</script>
