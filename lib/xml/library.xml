@@ -1,0 +1,67 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><block type="factory_base" id="Vvy=tU.MG6Rv^1_Ah;rS" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="NONE"/>
+    <field name="NAME">send request</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">NONE</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="kVM0h_SLpB0*_#+|OSKG">
+        <field name="INPUTNAME">url</field>
+        <field name="ALIGN">CENTRE</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="0X*!@8M$KSxIF(*++DK%">
+            <field name="TEXT">url:</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="hLz%kGn^J.iSmHfd_0Ue"/>
+          <block type="type_string" id="aq12:?LOS/~a[GoLi][G"/>
+        </value>
+        <next>
+          <block type="input_dummy" id=",a2c;zX!-C824Xjj^)Ji">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_dropdown" id="*vP65eho4x$=hJxcw6=O">
+                <mutation options="[&quot;text&quot;,&quot;text&quot;]"/>
+                <field name="FIELDNAME">methods</field>
+                <field name="USER0">get</field>
+                <field name="CPU0">OPTIONNAME</field>
+                <field name="USER1">post</field>
+                <field name="CPU1">OPTIONNAME</field>
+              </block>
+            </statement>
+            <next>
+              <block type="input_value" id="5yF7IUVp-u`}Y}bFEcdw">
+                <field name="INPUTNAME">parameter</field>
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="8xW,RCjgHjuOHC$[=3.m">
+                    <field name="TEXT">parameter:</field>
+                  </block>
+                </statement>
+                <value name="TYPE">
+                  <shadow type="type_null" id="$rZN|kgMd{bn+gL(Y9r~"/>
+                  <block type="type_string" id="LuINXSc#-b%~iD(jT0P_"/>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="WOCXMDJP.%ZjVG1]vaT}" deletable="false" movable="false">
+        <field name="TEXT"/>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="n%k~e7^BsFzcPhN,8ri-" deletable="false" movable="false">
+        <field name="TEXT"/>
+      </block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="4d[?okt8mYEnRBr]?6IC">
+        <mutation colour="#5b67a5"/>
+        <field name="HUE">230</field>
+      </block>
+    </value>
+  </block></xml>
